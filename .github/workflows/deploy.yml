@@ -1,1 +1,25 @@
-yaml:
+const express = require('express');
+const cors = require('cors');
+require('dotenv').config();
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(cors());
+app.use(express.json());
+
+app.get('/', (req, res) => {
+  res.json({
+    status: '🟢 ALIVE',
+    name: 'Shadow Hub',
+    message: '24/7 Development Environment Running'
+  });
+});
+
+app.get('/health', (req, res) => {
+  res.status(200).json({ healthy: true });
+});
+
+app.listen(PORT, () => {
+  console.log(`🌙 Shadow Hub running on port ${PORT}`);
+});
