@@ -1,0 +1,20 @@
+{
+  "name": "shadow-hub",
+  "version": "1.0.0",
+  "description": "24/7 Always-on development environment with Render.com and GitHub Actions",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "cd server && npm start",
+    "dev": "cd server && npm run dev",
+    "install-deps": "cd server && npm install"
+  },
+  "keywords": [
+    "shadow-hub",
+    "24-7",
+    "render",
+    "github-actions",
+    "codespaces"
+  ],
+  "author": "ShadowsDevs",
+  "license": "MIT"
+}
